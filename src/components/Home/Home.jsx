@@ -49,17 +49,17 @@ function Home() {
   }, [textControls, textInView])
 
   const currencyIcons = [
-    { src: RupeeIcon, alt: "Rupee", position: "top-7 left-85", size: "w-30" },
-    { src: DollarIcon, alt: "Dollar", position: "bottom-75 left-75", size: "w-26" },
-    { src: EuroIcon, alt: "Euro", position: "top-17 right-85", size: "w-30" },
-    { src: YenIcon, alt: "Yen", position: "bottom-80 right-85", size: "w-18" },
+    { src: RupeeIcon, alt: "Rupee", position: "top-7 left-75", size: "w-30" },
+    { src: DollarIcon, alt: "Dollar", position: "bottom-75 left-60", size: "w-26" },
+    { src: EuroIcon, alt: "Euro", position: "top-17 right-70", size: "w-30" },
+    { src: YenIcon, alt: "Yen", position: "bottom-80 right-75", size: "w-18" },
   ];
 
   const pointCards = [
     { delay: 0, initialY: 100, margin: "md:mt-0" },
     { delay: 0.2, initialY: 120, margin: "md:mt-15" },
-    { delay: 0.4, initialY: 140, margin: "md:-mt-35" },
-    { delay: 0.6, initialY: 160, margin: "md:-mt-20" },
+    { delay: 0.4, initialY: 140, margin: "md:-mt-15" },
+    { delay: 0.6, initialY: 160, margin: "md:mt-0" },
   ];
 
   const ServiceCards = [
@@ -69,7 +69,7 @@ function Home() {
   ];
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden ">
       <div className="relative flex flex-col items-center mt-10 sm:mt-27 min-h-[60vh] md:min-h-screen bg-white text-center px-4 sm:px-6">
         <span className="px-8 py-2 text-sm sm:text-base font-semibold bg-blue5 text-blue2 rounded-full">
           CONSULTANT
