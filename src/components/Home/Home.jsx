@@ -78,7 +78,7 @@ function Home() {
           Accounting & Tax Services
         </h2>
         <h1 className="text-4xl sm:text-6xl md:text-8xl font-semibold text-black mt-4">
-          ARAV GROUP
+          AARAV GROUP
         </h1>
         <p className="mt-10 text-xl sm:text-lg md:text-4xl font-medium text-textCor max-w-[90%] sm:max-w-3xl">
           Invest your time and efforts on running your business. Leave the accounting to us.
