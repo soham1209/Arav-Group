@@ -18,9 +18,36 @@ import "swiper/css/pagination";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 
+const currencyIcons = [
+  { src: RupeeIcon, alt: "Rupee", position: "top-7 left-75", size: "w-30" },
+  { src: DollarIcon, alt: "Dollar", position: "bottom-75 left-60", size: "w-26" },
+  { src: EuroIcon, alt: "Euro", position: "top-17 right-70", size: "w-30" },
+  { src: YenIcon, alt: "Yen", position: "bottom-80 right-75", size: "w-18" },
+];
+
+const pointCards = [
+  { delay: 0, initialY: 100, margin: "md:mt-0" },
+  { delay: 0.2, initialY: 120, margin: "md:mt-15" },
+  { delay: 0.4, initialY: 140, margin: "md:-mt-15" },
+  { delay: 0.6, initialY: 160, margin: "md:mt-0" },
+];
+
+const serviceCards = [
+  { initialX: -100 },
+  { initialX: -120 },
+  { initialX: -140 }
+];
+
+const reviewCards = [
+  { review: 2 },
+  { review: 2 },
+  { review: 2 },
+  { review: 2 },
+  { review: 2 }
+];
 
 function Home() {
-
+  //for service name
   const controls = useAnimation()
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 })
 
@@ -34,9 +61,9 @@ function Home() {
     }
   }, [controls, inView]);
 
-
+  //for text of why to chose us
   const textControls = useAnimation()
-  const { ref:textRef, inView:textInView } = useInView({ triggerOnce: true, threshold:0.3 })
+  const { ref: textRef, inView: textInView } = useInView({ triggerOnce: true, threshold: 0.3 })
 
   useEffect(() => {
     if (textInView) {
@@ -48,29 +75,10 @@ function Home() {
 
   }, [textControls, textInView])
 
-  const currencyIcons = [
-    { src: RupeeIcon, alt: "Rupee", position: "top-7 left-75", size: "w-30" },
-    { src: DollarIcon, alt: "Dollar", position: "bottom-75 left-60", size: "w-26" },
-    { src: EuroIcon, alt: "Euro", position: "top-17 right-70", size: "w-30" },
-    { src: YenIcon, alt: "Yen", position: "bottom-80 right-75", size: "w-18" },
-  ];
-
-  const pointCards = [
-    { delay: 0, initialY: 100, margin: "md:mt-0" },
-    { delay: 0.2, initialY: 120, margin: "md:mt-15" },
-    { delay: 0.4, initialY: 140, margin: "md:-mt-15" },
-    { delay: 0.6, initialY: 160, margin: "md:mt-0" },
-  ];
-
-  const ServiceCards = [
-    { delay: 0, initialZ: -100 },
-    { delay: 0.2, initialZ: -120 },
-    { delay: 0.4, initialZ: -140 }
-  ];
-
   return (
     <div className="overflow-x-hidden ">
-      <div className="relative flex flex-col items-center mt-10 sm:mt-27 min-h-[60vh] md:min-h-screen bg-white text-center px-4 sm:px-6">
+      {/* hero Section */}
+      <div className="relative flex flex-col items-center mt-10 sm:mt-30 min-h-[60vh] md:min-h-screen bg-white text-center px-4 sm:px-6">
         <span className="px-8 py-2 text-sm sm:text-base font-semibold bg-blue5 text-blue2 rounded-full">
           CONSULTANT
         </span>
@@ -115,7 +123,7 @@ function Home() {
         </div>
       </div>
 
-
+      {/* SERVICES section */}
       <div className='serdiv relative flex flex-col items-center min-h-[60vh] md:min-h-screen text-center p-20 px-4 sm:px-6'>
         <span className="px-8 py-2 text-sm sm:text-base font-semibold bg-black text-blue2 rounded-full">
           SERVICES
@@ -125,28 +133,9 @@ function Home() {
         </h2>
 
         <div className='grid gap-6 md:grid-cols-3 max-w-[90rem] mx-auto px-4 text-center mt-10 z-10'>
-          {ServiceCards.map((card, index) => {
-            const controls = useAnimation();
-            const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
-
-            useEffect(() => {
-              if (inView) {
-                controls.start({ opacity: 1, x: 0 })
-              }
-              else {
-                controls.start({ opacity: 0, x: -100 })
-              }
-            }, [controls, inView]);
-            return (
-              <motion.div
-                key={index}
-                ref={ref}
-                initial={{ opacity: 0, z: card.initialZ }}
-                animate={controls}
-                transition={{ duration: 1, delay: index * 0.3 }}
-              > <ServiceCard /></motion.div>
-            )
-          })}
+          {serviceCards.map((card, index) => (
+            <ServiceCard key={index} card={card} index={index} />
+          ))}
         </div>
 
         <motion.div
@@ -162,6 +151,7 @@ function Home() {
         </motion.div>
       </div>
 
+      {/* WHY CHOOSE US section */}
       <div className="flex flex-col md:flex-row max-w-[75%] min-h-screen mx-auto mt-30">
         <motion.div
           ref={textRef}
@@ -175,46 +165,26 @@ function Home() {
           <h2 className="text-2xl sm:text-5xl mt-8 font-bold ">
             Accurate Record Keeping
           </h2>
-          <p className="text-textCor text-xl mb-4 mt-7 text-justify">
+          <p className="text-textCor text-xl mb-4 mt-8 text-justify">
             We aim to maintain precise and reliable records to ensure transparency, compliance, and informed decision-making. Our commitment to accuracy strengthens trust with clients, stakeholders, and regulatory bodies, setting us apart in our industry.
           </p>
         </motion.div>
 
         <div className="grid max-w-2xl grid-cols-1 md:grid-cols-2 gap-y-0">
-          {pointCards.map((card, index) => {
-            const controls = useAnimation();
-            const { ref, inView } = useInView({ triggerOnce:true, threshold: 0 });
-            useEffect(() => {
-              if (inView) {
-                controls.start({ opacity: 1, y: 0 });
-              } else {
-                controls.start({ opacity: 0, y: 100 });  // Reset animation when out of view
-              }
-            }, [inView, controls]);
-            return (
-              <motion.div
-                key={index}
-                ref={ref}
-                initial={{ opacity: 0, y: card.initialY }}
-                animate={controls}
-                transition={{ duration: 1, delay: card.delay }}
-                className={card.margin}
-              >
-                <PointCard />
-              </motion.div>
-            )
-          })}
+          {pointCards.map((card, index) => (
+            <PointCard key={index} card={card} index={index} />
+          ))}
         </div>
       </div>
 
-
+      {/* TESTIMONIALS section */}
       <div className="flex justify-center flex-col text-center">
         <div className=" mx-auto max-w-xl mt-20">
           <span className="px-8 py-2 text-sm sm:text-base font-semibold  bg-blue5 text-blue2 rounded-full">
-            WHY CHOOSE US
+            TESTIMONIALS
           </span>
           <h2 className="text-2xl sm:text-5xl mt-8 font-bold ">
-            Accurate Record Keeping
+            Love from Clients
           </h2>
         </div>
         <div className="max-w-[75%] mx-auto mt-10 shadow-[0_0_100px_29px_rgba(0,180,216,0.25)] mb-50 ">
@@ -233,20 +203,10 @@ function Home() {
             }}
             className=""
           >
-            <SwiperSlide>
-              <ReviewCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <ReviewCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <ReviewCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <ReviewCard />
-            </SwiperSlide>
+            {reviewCards.map((card, index) => (
+              <SwiperSlide key={index}><ReviewCard /></SwiperSlide>
+            ))}
           </Swiper>
-
         </div>
       </div>
     </div >
