@@ -1,13 +1,8 @@
 import React, { useEffect } from 'react'
 import './Home.css'
-import Button from '../Button/Button'
-import ServiceCard from '../ServiceCard/ServiceCard';
-import PointCard from '../PointCard/PointCard'
-import ReviewCard from '../ReviewCard/ReviewCard'
-import DollarIcon from "../../assets/DollarIcon.svg";
-import EuroIcon from "../../assets/EuroIcon.svg";
-import RupeeIcon from "../../assets/RupeeIcon.svg";
-import YenIcon from "../../assets/YenIcon.svg";
+
+import { Button,ServiceCard,PointCard,ReviewCard} from '../index';
+import{DollarIcon,EuroIcon,RupeeIcon,YenIcon} from '../../assets/index'
 
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination, Autoplay } from "swiper/modules"
@@ -17,6 +12,7 @@ import "swiper/css/pagination";
 //motion animation
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
+import { Form } from 'react-router';
 
 const currencyIcons = [
   { src: RupeeIcon, alt: "Rupee", position: "top-7 left-75", size: "w-30" },
@@ -78,7 +74,7 @@ function Home() {
   return (
     <div className="overflow-x-hidden ">
       {/* hero Section */}
-      <div className="relative flex flex-col items-center mt-10 sm:mt-30 min-h-[60vh] md:min-h-screen bg-white text-center px-4 sm:px-6">
+      <div className="relative flex flex-col items-center mt-10 sm:mt-20 min-h-[60vh] md:min-h-screen bg-white text-center px-4 sm:px-6">
         <span className="px-8 py-2 text-sm sm:text-base font-semibold bg-blue5 text-blue2 rounded-full">
           CONSULTANT
         </span>
@@ -98,11 +94,11 @@ function Home() {
             placeholder="Enter your email"
             className="px-4 py-3 w-full md:w-80 sm:w-72 text-base sm:text-lg border-2 text-textCor border-borderCor rounded-full focus:outline-none focus:ring-2 focus:ring-blue2"
           />
-          <Button hover="transition-all duration-500 hover:bg-[position:23900%_0] focus:outline-none " />
+          <Button hover="transition-all duration-500 hover:bg-[position:24900%_0] focus:outline-none " />
         </div>
 
 
-        <div className="absolute inset-0 justify-center items-center -z-0 hidden lg:block">
+        <div className="absolute inset-0 justify-center items-center z-0 hidden lg:block">
           {currencyIcons.map((icon, index) => (
             <motion.img
               key={index}

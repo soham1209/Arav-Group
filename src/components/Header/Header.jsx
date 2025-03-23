@@ -81,7 +81,7 @@ function Header() {
                 </nav>
             </div>
             <div className="hidden md:block">
-                <Button hover="transition-all duration-500 hover:bg-[position:79000%_0] focus:outline-none "/>
+                <Button hover="transition-all duration-500 hover:bg-[position:118000%_0] focus:outline-none "/>
             </div>
 
 

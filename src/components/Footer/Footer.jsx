@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router'
+
+import { w, i, x } from '../../assets/index'
 
 function Footer() {
   return (
@@ -14,7 +17,7 @@ function Footer() {
             tax savings, they explore alternative approaches to familiar financial practices.
           </p>
         </div>
-        
+
         {/* Quick Links Section */}
         <div>
           <h2 className="text-lg font-semibold mb-3">Quick Link</h2>
@@ -26,19 +29,25 @@ function Footer() {
             <li><a href="#" className="hover:text-gray-400">Other Service</a></li>
           </ul>
         </div>
-        
+
         {/* Contact Us Section */}
         <div>
           <h2 className="text-lg font-semibold mb-3">Contact Us</h2>
           <p className="text-sm text-gray-300">sohanmsi@gmail.com</p>
           <p className="text-sm text-gray-300">Abcdeef Ghjklmno P.M Road, pqrst wvxyz 40004</p>
           <p className="text-sm text-gray-300">+91 9789027899</p>
-          
+
           {/* Social Icons */}
           <div className="flex space-x-3 mt-4">
-            <div className="w-8 h-8 bg-gray-500 rounded-full"></div>
-            <div className="w-8 h-8 bg-gray-500 rounded-full"></div>
-            <div className="w-8 h-8 bg-gray-500 rounded-full"></div>
+            <Link to="#">
+              <img className="max-w-8" src={w} alt="wa" />
+            </Link>
+            <Link to="#">
+              <img className='max-w-8' src={i} alt="ig" />
+            </Link>
+            <Link to="#">
+              <img className='max-w-8' src={x} alt="x" />
+            </Link>
           </div>
         </div>
       </div>
