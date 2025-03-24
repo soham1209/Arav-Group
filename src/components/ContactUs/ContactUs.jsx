@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect } from 'react'
-import { ContactUsCard, Form } from '../Index.js'
+import { ContactUsCard, Form } from '../index.js'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 

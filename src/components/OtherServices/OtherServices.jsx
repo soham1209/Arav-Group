@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { ReviewCardSwiper } from '../Index.js'
-import { Team } from '../../assets/index.js';
+import { ReviewCardSwiper } from '../index'
+import { Team } from '../../assets/index';
 
 const solutionsData = {
   "Advance Banking": {

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import './Home.css'
 
-import { Button,ServiceCard,PointCard,ReviewCard, ReviewCardSwiper} from '../Index';
+import { Button,ServiceCard,PointCard,ReviewCard, ReviewCardSwiper} from '../index';
 import{DollarIcon,EuroIcon,RupeeIcon,YenIcon} from '../../assets/index'
 
 import { Swiper, SwiperSlide } from "swiper/react"
