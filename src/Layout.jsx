@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Footer } from './components/index'
+import { Header, Footer } from './components/index.js'
 import { Outlet } from 'react-router'
 
 function Layout() {

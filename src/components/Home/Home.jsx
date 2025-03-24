@@ -1,13 +1,9 @@
 import React, { useEffect } from 'react'
 import './Home.css'
 
-import { Button,ServiceCard,PointCard,ReviewCard, ReviewCardSwiper} from '../index';
-import{DollarIcon,EuroIcon,RupeeIcon,YenIcon} from '../../assets/index'
+import { Button,ServiceCard,PointCard,ReviewCard, ReviewCardSwiper} from '../index.js';
+import{DollarIcon,EuroIcon,RupeeIcon,YenIcon} from '../../assets/index.js'
 
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Pagination, Autoplay } from "swiper/modules"
-import "swiper/css";
-import "swiper/css/pagination";
 
 //motion animation
 import { motion, useAnimation } from "framer-motion";

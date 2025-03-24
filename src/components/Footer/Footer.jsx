@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-import { w, i, x } from '../../assets/index'
+import { w, i, x } from '../../assets/index.js'
 
 function Footer() {
   return (

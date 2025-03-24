@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { location } from '../../assets/index'
+import { location } from '../../assets/index.js'
 import { motion,useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 function ContactUsCard({card,index}) {
