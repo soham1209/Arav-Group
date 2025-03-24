@@ -5,6 +5,7 @@ import { w, i, x } from '../../assets/index'
 
 function Footer() {
   return (
+    <div>
     <footer className="bg-black text-white py-10 px-5 md:px-20">
       <div className="grid md:grid-cols-3 gap-8">
         {/* About Us Section */}
@@ -52,6 +53,8 @@ function Footer() {
         </div>
       </div>
     </footer>
+      <div className=' text-center bg-blue-950 text-white text-sm'> All Copyright reserved @soham2025 </div>
+      </div>
   )
 }
 

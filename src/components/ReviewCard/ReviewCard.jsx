@@ -13,7 +13,7 @@ const ReviewCard = () => {
         <span>★</span>
       </div>
 
-      <p className="text-gray-700 mb-5 text-xl">
+      <p className="text-gray-700 mb-5 text-xl text-justify">
         We will assist in the establishment of the legal entities, working with
         the Fund and Sponsor’s advisers to prepare bespoke documentation,
         supporting you to get smoothly through to launch.

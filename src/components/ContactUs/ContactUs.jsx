@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect } from 'react'
-import { ContactUsCard, Form } from '../index.js'
+import { ContactUsCard, Form } from '../Index.js'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
@@ -41,7 +41,7 @@ function ContactUs() {
                 <span className="px-8 py-2 text-sm sm:text-base font-semibold bg-blue5 text-blue2 rounded-full mt-20">
                     Contact Info
                 </span>
-                <h2 className="text-2xl sm:text-5xl mt-8 font-semibold text-black">
+                <h2 className="text-2xl sm:text-5xl mt-8 font-bold text-black">
                     Contact Information
 
                 </h2>
@@ -67,7 +67,7 @@ function ContactUs() {
                 <span className="px-8 py-2 text-sm sm:text-base font-semibold bg-blue5 text-blue2 rounded-full mt-20">
                     Contact Info
                 </span>
-                <h2 className="text-2xl sm:text-5xl mt-8 font-semibold text-black">
+                <h2 className="text-2xl sm:text-5xl mt-8 font-bold text-black">
                     Contact Information
 
                 </h2>
