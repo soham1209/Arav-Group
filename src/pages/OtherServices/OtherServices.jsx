@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ReviewCardSwiper } from '../index.js'
+import { ReviewCardSwiper } from '../../components/index.js'
 import { Team } from '../../assets/index.js';
 
 const solutionsData = {

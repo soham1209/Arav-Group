@@ -9,8 +9,8 @@ function App() {
     <>
       <h1>Arav Group</h1>
       <Header/>
-      {/* <Home/>
-      <Footer/> */}
+      <Home/>
+      <Footer/>
     </>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
-import { ContactUsCard, Form } from '../index.js'
+import { ContactUsCard, Form } from  '../../components/';
+
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
@@ -78,4 +79,4 @@ function ContactUs() {
     )
 }
 
-export default ContactUs
+export default ContactUs;
