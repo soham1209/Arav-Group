@@ -1,17 +1,92 @@
 [
   {
+    "id": "account-bookkeeping",
+    "title": "Account And Book Keeping",
+    "description": "Bookkeeping and accounting are both crucial for managing a business's finances...",
+    "image": "/images/services/account-bookkeeping.jpg"
+  },
+  {
     "id": "audit/internal",
     "title": "Internal/Concurrent Audit",
-    "description": "Full content for internal or concurrent audit services..."
+    "description": "Full content for internal or concurrent audit services...",
+    "image": "/images/services/audit-internal.jpg"
   },
   {
     "id": "audit/cooperative",
     "title": "Co-operative Audit",
-    "description": "Full content for co-operative audit services..."
+    "description": "Full content for co-operative audit services...",
+    "image": "/images/services/audit-cooperative.jpg"
+  },
+  {
+    "id": "audit/tax",
+    "title": "Tax Audit",
+    "description": "A Tax Audit is a mandatory examination of a taxpayer’s financial records...",
+    "image": "/images/services/audit-tax.jpg"
+  },
+  {
+    "id": "direct-tax/filling",
+    "title": "Direct Tax Filing",
+    "description": "Direct Tax Filing refers to the process of reporting and paying taxes...",
+    "image": "/images/services/direct-tax-filing.jpg"
+  },
+  {
+    "id": "direct-tax/saving",
+    "title": "Direct Tax Saving & Planning",
+    "description": "Direct Tax Saving & Planning involves legally optimizing your taxable income...",
+    "image": "/images/services/direct-tax-saving.jpg"
+  },
+  {
+    "id": "direct-tax/scrutiny",
+    "title": "Direct Tax Scrutiny",
+    "description": "Direct Tax Scrutiny refers to the detailed examination of your income tax return...",
+    "image": "/images/services/direct-tax-scrutiny.jpg"
+  },
+  {
+    "id": "indirect/gst",
+    "title": "GST Registration & Filing",
+    "description": "Goods and Services Tax (GST) is a unified indirect tax applicable...",
+    "image": "/images/services/indirect-gst.jpg"
+  },
+  {
+    "id": "indirect/notice",
+    "title": "GST Notice Handling",
+    "description": "Receiving a GST notice from the tax department can be stressful...",
+    "image": "/images/services/indirect-notice.jpg"
   },
   {
     "id": "registration/company",
-    "title": "Company Incorporation",
-    "description": "Details on company incorporation and registration services..."
+    "title": "Company Registration (Private/Public/OPC)",
+    "description": "Starting a company in India requires legal registration under the Companies Act...",
+    "image": "/images/services/registration-company.jpg"
+  },
+  {
+    "id": "registration/gst",
+    "title": "GST Registration",
+    "description": "GST Registration is mandatory for businesses whose turnover exceeds the threshold...",
+    "image": "/images/services/registration-gst.jpg"
+  },
+  {
+    "id": "registration/partnership",
+    "title": "Partnership Firm Registration",
+    "description": "Registering a partnership firm gives your business legal recognition...",
+    "image": "/images/services/registration-partnership.jpg"
+  },
+  {
+    "id": "registration/trust",
+    "title": "Trust Registration",
+    "description": "Setting up a charitable or private trust in India involves drafting a Trust Deed...",
+    "image": "/images/services/registration-trust.jpg"
+  },
+  {
+    "id": "gst-filling",
+    "title": "GST Filing",
+    "description": "GST (Goods and Services Tax) filing is the process by which businesses...",
+    "image": "/images/services/gst-filing.jpg"
+  },
+  {
+    "id": "income-tax",
+    "title": "Income Tax Filing",
+    "description": "Income Tax Filing involves submitting your income and tax details...",
+    "image": "/images/services/income-tax.jpg"
   }
 ]

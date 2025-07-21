@@ -4,7 +4,7 @@ function Button({hover,maxWidth}) {
     return (
 
 
-        <div className={`button relative px-8 py-4 text-white sm:text-lg md:text-xl font-normal rounded-full 
+        <div className={`button relative px-8 py-2 flex items-center text-white sm:text-lg md:text-xl font-normal rounded-full 
         bg-gradient-to-r from-blue3 to-blue1 bg-[length:100%_300%] ${maxWidth} 
         ${hover} 
         `}>

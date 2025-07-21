@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import './Header.css';
 import logo from "../../assets/logo.jpg";
-import { NavLink } from 'react-router';
+import { NavLink, useLocation } from 'react-router';
 import Button from '../Button/Button';
 import { Menu, X, ChevronDown } from "lucide-react";
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
-
+    const location = useLocation();
+    const isKnowledgeBankActive = location.pathname.startsWith('/know-bank');
     return (
-        <div className="header sticky top-0 z-50 w-[85%] flex items-center justify-around py-2 mt-4 -mb-26 mx-auto bg-white/50 rounded-2xl shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[9px]">
+        <div className="header sticky top-0 z-50 w-[85%] flex items-center justify-around py-0 mt-4 -mb-26 mx-auto bg-white/50 rounded-2xl shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[9px]">
             {/* Logo */}
             <div className="logo">
                 <img src={logo} alt="AravGroup" />
@@ -17,29 +18,29 @@ function Header() {
 
             {/* Desktop Nav */}
             <div className="nav hidden md:flex border-2 border-solid rounded-full">
-                <nav className="flex justify-around items-center gap-2 p-2 rounded-full">
+                <nav className="flex justify-around items-center gap-2 p-1 rounded-full">
                     <NavLink
                         to="/"
                         className={({ isActive }) =>
-                            `px-6 py-2 rounded-full font-medium text-xl ${isActive ? "bg-blue5 text-blue2" : "text-black hover:text-blue2"}`
+                            `px-6 py-1 rounded-full font-medium text-xl ml-1 ${isActive ? "bg-blue5 text-blue2" : "text-black hover:text-blue2"}`
                         }
                     >
                         Home
                     </NavLink>
 
                     <NavLink
-                        to="/gst-filling"
+                        to="/services/gst-filling"
                         className={({ isActive }) =>
-                            `px-4 py-2 rounded-full font-medium text-xl ${isActive ? "bg-blue5 text-blue2" : "text-black hover:text-blue2"}`
+                            `px-4 py-1 rounded-full font-medium text-xl ${isActive ? "bg-blue5 text-blue2" : "text-black hover:text-blue2"}`
                         }
                     >
                         GST Filing
                     </NavLink>
 
                     <NavLink
-                        to="/income-tax"
+                        to="/services/income-tax"
                         className={({ isActive }) =>
-                            `px-4 py-2 rounded-full font-medium text-xl ${isActive ? "bg-blue5 text-blue2" : "text-black hover:text-blue2"}`
+                            `px-4 py-1 rounded-full font-medium text-xl ${isActive ? "bg-blue5 text-blue2" : "text-black hover:text-blue2"}`
                         }
                     >
                         Income Tax
@@ -49,7 +50,7 @@ function Header() {
                             <NavLink
                                 to="/services"
                                 className={({ isActive }) =>
-                                    `px-4 py-2 rounded-full font-medium text-xl flex items-end gap-1 ${isActive ? "bg-blue5 text-blue2" : "text-black hover:text-blue2"
+                                    `px-4 py-1 rounded-full font-medium text-xl flex items-end gap-1 ${isActive ? "bg-blue5 text-blue2" : "text-black hover:text-blue2"
                                     }`
                                 }
                             >
@@ -57,7 +58,7 @@ function Header() {
                             </NavLink>
 
                             {/* MAIN DROPDOWN */}
-                            <div className="absolute left-1/2 -translate-x-1/2 mt-3 min-w-[16rem] rounded-xl bg-white text-black opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto z-50">
+                            <div className="absolute left-1/2 -translate-x-1/2 min-w-[16rem] rounded-xl bg-white text-black opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto z-50">
 
                                 {/* 1. Accounting and Book Keeping (No Submenu) */}
                                 <div className="px-4 py-2 bg-blue5 text-blue2 rounded-xl">
@@ -71,7 +72,7 @@ function Header() {
                                     <div className="flex items-center justify-between cursor-pointer">
                                         Audit and Assurance <ChevronDown size={16} />
                                     </div>
-                                    <div className="absolute left-full top-0 ml-2 min-w-[15rem] rounded-xl bg-white opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out group-hover/item:opacity-100 group-hover/item:scale-100 group-hover/item:pointer-events-auto shadow-lg z-50">
+                                    <div className="absolute left-full top-0 min-w-[15rem] rounded-xl bg-white opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out group-hover/item:opacity-100 group-hover/item:scale-100 group-hover/item:pointer-events-auto shadow-lg z-50">
                                         <NavLink className="block px-4 py-2 bg-blue5 rounded-xl" to="/services/audit/internal">Internal/Concurrent Audit</NavLink>
                                         <NavLink className="block px-4 py-2 bg-white rounded-xl" to="/services/audit/cooperative">Co-operative Audit</NavLink>
                                         <NavLink className="block px-4 py-2 bg-blue5 rounded-xl" to="/services/audit/tax">Tax Audit</NavLink>
@@ -83,7 +84,7 @@ function Header() {
                                     <div className="flex items-center justify-between cursor-pointer">
                                         Direct Tax <ChevronDown size={16} />
                                     </div>
-                                    <div className="absolute left-full top-0 ml-2 min-w-[15rem] rounded-xl bg-white opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out group-hover/item:opacity-100 group-hover/item:scale-100 group-hover/item:pointer-events-auto shadow-lg z-50">
+                                    <div className="absolute left-full top-0 min-w-[15rem] rounded-xl bg-white opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out group-hover/item:opacity-100 group-hover/item:scale-100 group-hover/item:pointer-events-auto shadow-lg z-50">
                                         <NavLink className="block px-4 py-2 bg-blue5 rounded-xl" to="/services/direct-tax/filling">Income Tax Filing</NavLink>
                                         <NavLink className="block px-4 py-2 bg-white rounded-xl" to="/services/direct-tax/saving">Tax Saving</NavLink>
                                         <NavLink className="block px-4 py-2 bg-blue5 rounded-xl" to="/services/direct-tax/scrutiny">Scrutiny</NavLink>
@@ -95,7 +96,7 @@ function Header() {
                                     <div className="flex items-center justify-between cursor-pointer">
                                         Indirect Taxation <ChevronDown size={16} />
                                     </div>
-                                    <div className="absolute left-full top-0 ml-2 min-w-[15rem] rounded-xl bg-white opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out group-hover/item:opacity-100 group-hover/item:scale-100 group-hover/item:pointer-events-auto shadow-lg z-50">
+                                    <div className="absolute left-full top-0  min-w-[15rem] rounded-xl bg-white opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out group-hover/item:opacity-100 group-hover/item:scale-100 group-hover/item:pointer-events-auto shadow-lg z-50">
                                         <NavLink className="block px-4 py-2 bg-blue5 rounded-xl" to="/services/indirect/gst">GST Return & Compliance</NavLink>
                                         <NavLink className="block px-4 py-2 bg-white rounded-xl" to="/services/indirect/notice">Notice Handling</NavLink>
                                     </div>
@@ -106,7 +107,7 @@ function Header() {
                                     <div className="flex items-center justify-between cursor-pointer">
                                         All Type of Registrations <ChevronDown size={16} />
                                     </div>
-                                    <div className="absolute left-full top-0 ml-2 min-w-[17rem] rounded-xl bg-white opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out group-hover/item:opacity-100 group-hover/item:scale-100 group-hover/item:pointer-events-auto shadow-lg z-50">
+                                    <div className="absolute left-full top-0  min-w-[17rem] rounded-xl bg-white opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out group-hover/item:opacity-100 group-hover/item:scale-100 group-hover/item:pointer-events-auto shadow-lg z-50">
                                         <NavLink className="block px-4 py-2 bg-blue5 rounded-xl" to="/services/registration/company">Company Incorporation</NavLink>
                                         <NavLink className="block px-4 py-2 bg-white rounded-xl" to="/services/registration/gst">GST Registration</NavLink>
                                         <NavLink className="block px-4 py-2 bg-blue5 rounded-xl" to="/services/registration/partnership">Partnership Firm</NavLink>
@@ -119,7 +120,7 @@ function Header() {
                                     <div className="flex items-center justify-between cursor-pointer">
                                         Other Services <ChevronDown size={16} />
                                     </div>
-                                    <div className="absolute left-full top-0 ml-2 min-w-[18rem] rounded-xl bg-white opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out group-hover/item:opacity-100 group-hover/item:scale-100 group-hover/item:pointer-events-auto shadow-lg z-50">
+                                    <div className="absolute left-full top-0  min-w-[18rem] rounded-xl bg-white opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out group-hover/item:opacity-100 group-hover/item:scale-100 group-hover/item:pointer-events-auto shadow-lg z-50">
                                         <NavLink className="block px-4 py-2 bg-blue5 rounded-xl" to="/services/other/project-report">Project Report</NavLink>
                                         <NavLink className="block px-4 py-2 bg-white rounded-xl" to="/services/other/dsc">Digital Signature</NavLink>
                                         <NavLink className="block px-4 py-2 bg-blue5 rounded-xl" to="/services/other/web-development">Web Development</NavLink>
@@ -128,7 +129,7 @@ function Header() {
                                         <NavLink className="block px-4 py-2 bg-white rounded-xl" to="/services/other/financial-planning">Financial Planning</NavLink>
                                         <NavLink className="block px-4 py-2 bg-blue5 rounded-xl" to="/services/other/retirement-planning">Retirement Planning</NavLink>
                                     </div>
-                                </div> 
+                                </div>
 
                             </div>
                         </div>
@@ -136,43 +137,36 @@ function Header() {
                     </div>
 
                     <div className="relative group">
-                        <NavLink
-                            to="/know-bank"
-                            className={({ isActive }) =>
-                                `px-4 py-2 rounded-full font-medium text-xl flex items-center gap-1 ${isActive ? "bg-blue5 text-blue2" : "text-black hover:text-blue2"}`
-                            }
+                        <span
+                            className={`px-4 py-1 rounded-full font-medium text-xl flex items-end gap-1 ${isKnowledgeBankActive ? "bg-blue5 text-blue2" : "text-black hover:text-blue2"
+                                } cursor-default select-none`}
                         >
                             Knowlage Bank <ChevronDown size={20} />
-                        </NavLink>
+                        </span>
 
-                        <div className="absolute left-1/2 -translate-x-1/2 mt-3 min-w-[11rem] rounded-xl bg-white text-black shadow-lg ring-1 ring-slate-200 opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto z-50">
-                            <NavLink
-                                to="/other-services/company-registration"
-                                className="block px-4 py-2 hover:bg-blue5/10"
-                            >
-                                Company Registration
-                            </NavLink>
-                            <NavLink
-                                to="/other-services/udhyam"
-                                className="block px-4 py-2 hover:bg-blue5/10"
-                            >
-                                Udyam/MSME Cert.
-                            </NavLink>
-                            <NavLink
-                                to="/other-services/digital-signature"
-                                className="block px-4 py-2 hover:bg-blue5/10 rounded-b-xl"
-                            >
-                                Digital Signature
-                            </NavLink>
+
+                        <div className="absolute left-1/2 -translate-x-1/2  min-w-[16rem] rounded-xl bg-white text-black opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto z-50">
+
+                            {/* 1. Accounting and Book Keeping (No Submenu) */}
+                            <div className="px-4 py-2 bg-blue5 text-blue2 rounded-xl">
+                                <NavLink className="flex items-end" to="/know-bank/event-calender">
+                                    GST Event Calender
+                                </NavLink>
+                            </div>
+
+                            {/* 2. Audit and Assurance */}
+                            <div className="relative group/item px-4 py-2 bg-white text-blue2 rounded-xl hover:bg-blue100">
+                                <NavLink className="flex items-end" to="/know-bank/calculator">
+                                    GST Calculator
+                                </NavLink>
+                            </div>
                         </div>
                     </div>
-
-
 
                     <NavLink
                         to="/about-us"
                         className={({ isActive }) =>
-                            `px-4 py-2 rounded-full font-medium text-xl ${isActive ? "bg-blue5 text-blue2" : "text-black hover:text-blue2"}`
+                            `px-4 py-1 rounded-full font-medium text-xl mr-1 ${isActive ? "bg-blue5 text-blue2" : "text-black hover:text-blue2"}`
                         }
                     >
                         About Us

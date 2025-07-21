@@ -66,18 +66,21 @@ function Home() {
     <div className="overflow-x-hidden ">
       {/* hero Section */}
       <div
-        className="relative min-h-[60vh] sm:h-screen bg-cover bg-center flex flex-col items-center sm:items-start justify-center px-4
+        className="relative min-h-[60vh] sm:h-screen bg-cover bg-center flex flex-col items-center sm:items-start justify-end  px-4
              before:absolute before:inset-0 before:bg-black/60 before:z-0"
         style={{ backgroundImage: `url(${BgImg})` }}
       >
         {/* Content should appear above the overlay */}
-        <div className="relative z-10 space-y-2 sm:space-y-4 sm:ml-10 text-center sm:text-left">
-
+        <div className="relative z-10 space-y-2 sm:space-y-4 sm:ml-10  text-center sm:text-left mb-10 sm:mb-20">
+          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-wide leading-tight text-white">
+            ARAV GROUP
+          </h1>
           {/* ROW: MANAGE YOUR + TYPEWRITER */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3">
-            <h1 className="text-4xl sm:text-6xl font-extrabold tracking-wide leading-tight text-white">
+
+            <h2 className="text-4xl sm:text-6xl font-extrabold tracking-wide leading-tight text-white">
               MANAGE YOUR
-            </h1>
+            </h2>
             <h1 className="text-4xl sm:text-6xl font-extrabold tracking-wide leading-tight text-blue1">
               <Typewriter
                 words={[
@@ -107,12 +110,13 @@ function Home() {
 
           <h2 className='text-2xl sm:text-3xl font-semibold text-white mt-6'> Consulting services for better futures</h2>
 
-          <div className=" flex gap-10 mt-6 ">
+                  <div className=" flex justify-around sm:justify-normal gap-10 mt-6 ">
             <Button hover="transition-all duration-500 hover:bg-[position:119000%_0] focus:outline-none " />
-            <button className='text-xl text-white font-normal border-2 border-white  rounded-full px-8 py-4 '><Link to="/other-services">
+            <button className='sm:text-lg md:text-xl text-white font-normal border-2 border-white  rounded-full px-8 py-4 '><Link to="/other-services">
               Our Services
             </Link></button>
           </div>
+
         </div>
 
       </div>

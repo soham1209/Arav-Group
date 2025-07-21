@@ -34,9 +34,9 @@ function Footer() {
         {/* Contact Us Section */}
         <div>
           <h2 className="text-lg font-semibold mb-3">Contact Us</h2>
-          <p className="text-sm text-gray-300">sohanmsi@gmail.com</p>
+          <p className="text-sm text-gray-300">aaravgrouphere@gmail.com</p>
           <p className="text-sm text-gray-300">Abcdeef Ghjklmno P.M Road, pqrst wvxyz 40004</p>
-          <p className="text-sm text-gray-300">+91 9789027899</p>
+          <p className="text-sm text-gray-300">+91 9689151993</p>
 
           {/* Social Icons */}
           <div className="flex space-x-3 mt-4">
