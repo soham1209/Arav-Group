@@ -1,0 +1,17 @@
+[
+  {
+    "imgKey": "location",
+    "title": "Our Location",
+    "description": "1901 Thornridge Cir.\nShiloh,\nHawaii 81063"
+  },
+  {
+    "imgKey": "email",
+    "title": "Email Us",
+    "description": "aaravgrouphere@gmail.com"
+  },
+  {
+    "imgKey": "phone",
+    "title": "Call Us",
+    "description": "+91 9689151993"
+  }
+]

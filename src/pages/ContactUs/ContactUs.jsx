@@ -1,15 +1,16 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { ContactUsCard, Form } from  '../../components/';
+import ContactUsCards from '../../data/contactCards.json';
 
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
-const ContactUsCards = [
-    { initialX: -100 },
-    { initialX: -120 },
-    { initialX: -140 }
-];
+// const ContactUsCards = [
+//     { initialX: -100 },
+//     { initialX: -120 },
+//     { initialX: -140 }
+// ];
 
 function ContactUs() {
 
