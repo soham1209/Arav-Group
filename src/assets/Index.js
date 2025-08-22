@@ -6,8 +6,8 @@ import x from "./social/x.png"
 import location from'./contact/location1.svg'
 import mail from './contact/mail1.svg'
 import phone from './contact/phone1.svg'
-import Team from './Team.png'
-import BgImg from './caBackGround.jpg'
+import team from './team.png'
+import bgImg from './caBackGround.jpg'
 
 
-export{logo,i,w,x,location,mail,phone,Team,BgImg}
+export{logo,i,w,x,location,mail,phone,team,bgImg}

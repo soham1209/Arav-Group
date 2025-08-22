@@ -1,7 +1,7 @@
 import React,{useRef} from 'react';
 import { useParams } from 'react-router';
 import services from '../../data/servicesData.json';
-import { Team } from '../../assets/index.js';
+import { team } from '../../assets/index.js';
 import { Form } from '../../components/index.js';
 import { motion,useInView } from 'framer-motion';
 
@@ -41,7 +41,7 @@ function Service() {
           animate={imageInView ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 1 }}
         >
-          <img src={Team} alt="text" className="w-full h-auto rounded-xl" />
+          <img src={team} alt="text" className="w-full h-auto rounded-xl" />
         </motion.div>
 
         {/* Text Animation from Right */}
