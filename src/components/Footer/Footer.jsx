@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-import { w, i, x } from '../../assets/index.js'
+// import { w, i, x } from '../../assets/index.js'
+import w from '../../assets/social/w.png'
+import i from '../../assets/social/i.png'
+import x from '../../assets/social/x.png'
 
 function Footer() {
   return (
