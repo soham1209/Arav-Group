@@ -1,7 +1,8 @@
 import React,{useRef} from 'react';
 import { useParams } from 'react-router';
 import services from '../../data/servicesData.json';
-import { team } from '../../assets/index.js';
+// import { team } from '../../assets/index.js';
+import team from '../../assets/team.jpg';
 import { Form } from '../../components/index.js';
 import { motion,useInView } from 'framer-motion';
 
