@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { ReviewCardSwiper } from "../../components/index.js";
-// import { team } from '../../assets/index.js'
-import team from '../../assets/team.jpg'
+import game from '../../assets/game.png'
 
 const solutionsData = {
   "Advance Banking": {
@@ -11,7 +10,7 @@ const solutionsData = {
     subTitle: "Optimize & Scale",
     subDescription:
       "Leverage modern banking solutions to drive growth and ensure seamless transactions.",
-    image: team,
+    image: game,
   },
   "Retirement Solutions": {
     title: "Retirement Solutions",
@@ -20,7 +19,7 @@ const solutionsData = {
     subTitle: "Secure Your Future",
     subDescription:
       "Ensure financial stability with tailored retirement plans designed for long-term success.",
-    image: team,
+    image: game,
   },
   "Fraud & Protect": {
     title: "Fraud & Protect",
@@ -29,7 +28,7 @@ const solutionsData = {
     subTitle: "Acquire, manage and grow",
     subDescription:
       "Drive value for investors and position yourself for growth with scalable, innovative wealth management solutions.",
-    image: team,
+    image: game,
   },
   "Risk & Compliance": {
     title: "Risk & Compliance",
@@ -38,7 +37,7 @@ const solutionsData = {
     subTitle: "Mitigate & Succeed",
     subDescription:
       "Effectively manage risk and ensure compliance with evolving regulations.",
-    image: team,
+    image: game,
   },
   "Wealth Management": {
     title: "Wealth Management",
@@ -47,7 +46,7 @@ const solutionsData = {
     subTitle: "Grow Your Assets",
     subDescription:
       "Utilize innovative wealth management solutions to achieve financial success.",
-    image: team,
+    image: game,
   },
 };
 
