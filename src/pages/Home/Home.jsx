@@ -18,6 +18,8 @@ import { Form } from 'react-router';
 
 import { Typewriter } from 'react-simple-typewriter';
 
+import serviceCards from "../../data/servicesCard.json";
+
 const pointCards = [
   { delay: 0, initialY: 100, margin: "md:mt-0" },
   { delay: 0.2, initialY: 120, margin: "md:mt-15" },
@@ -25,13 +27,13 @@ const pointCards = [
   { delay: 0.6, initialY: 160, margin: "md:mt-0" },
 ];
 
-const serviceCards = [
-  { initialX: -100 },
-  { initialX: -120 },
-  { initialX: -140 },
-  { initialX: -160 },
-  { initialX: -180 },
-];
+// const serviceCards = [
+//   { initialX: -100 },
+//   { initialX: -120 },
+//   { initialX: -140 },
+//   { initialX: -160 },
+//   { initialX: -180 },
+// ];
 
 function Home() {
   //for service name
@@ -151,7 +153,7 @@ function Home() {
           >
             {serviceCards.map((card, index) => (
               <SwiperSlide key={index} className="px-4">
-                <ServiceCard card={card} index={index} />
+                <ServiceCard key={card.id} card={card} index={index} />
               </SwiperSlide>
             ))}
           </Swiper>

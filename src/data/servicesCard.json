@@ -1,0 +1,92 @@
+[
+  {
+    "id": "account-bookkeeping",
+    "title": "Account And Book Keeping",
+    "description": "Bookkeeping and accounting are the backbone of any successful business. Our comprehensive services ensure that your financial transactions are systematically recorded, organized, and analyzed, giving you a clear and accurate picture of your business's financial health.",
+    "image": "/images/services/account-bookkeeping."
+  },
+  {
+    "id": "audit/internal",
+    "title": "Internal/Concurrent Audit",
+    "description": "An Internal or Concurrent Audit is a proactive evaluation of your organization's internal controls and risk management. We help identify inefficiencies and strengthen your control environment to prevent fraud and improve operations.",
+    "image": "/images/services/audit-internal.jpg"
+  },
+  {
+    "id": "audit/cooperative",
+    "title": "Co-operative Audit",
+    "description": "A specialized examination of the accounts of co-operative societies to ensure compliance with the relevant acts, rules, and by-laws, protecting the interests of all members and maintaining the society's legal and financial integrity.",
+    "image": "/images/services/audit-cooperative.jpg"
+  },
+  {
+    "id": "audit/tax",
+    "title": "Tax Audit",
+    "description": "A mandatory examination of a taxpayer’s financial records under Section 44AB of the Income Tax Act. Our qualified Chartered Accountants conduct a thorough audit to ensure statutory compliance and help avoid penalties.",
+    "image": "/images/services/audit-tax.jpg"
+  },
+  {
+    "id": "direct-tax/filling",
+    "title": "Direct Tax Filing",
+    "description": "Direct Tax Filing, or Income Tax Return (ITR) filing, is a mandatory annual process. We simplify this by helping you gather documents, calculate tax liability, and file your return accurately and on time.",
+    "image": "/images/services/direct-tax-filing.jpg"
+  },
+  {
+    "id": "direct-tax/saving",
+    "title": "Direct Tax Saving & Planning",
+    "description": "A strategic and legal approach to optimize your tax liability. We analyze your income and advise on the best use of permissible deductions, exemptions, and allowances to increase your take-home income.",
+    "image": "/images/services/direct-tax-saving.jpg"
+  },
+  {
+    "id": "direct-tax/scrutiny",
+    "title": "Direct Tax Scrutiny",
+    "description": "Receiving a scrutiny notice can be daunting. We provide comprehensive representation and support, helping you prepare documentation and draft responses to departmental queries for a fair resolution.",
+    "image": "/images/services/direct-tax-scrutiny.jpg"
+  },
+  {
+    "id": "indirect/gst",
+    "title": "GST Registration & Filing",
+    "description": "We cover the complete spectrum of GST compliance, from guiding you through the registration process to handling all aspects of GST filing, ensuring your business stays compliant and avoids penalties.",
+    "image": "/images/services/indirect-gst.jpg"
+  },
+  {
+    "id": "indirect/notice",
+    "title": "GST Notice Handling",
+    "description": "Our GST Notice Handling service is designed to alleviate stress. We analyze the issue, draft a comprehensive and legally sound reply, and represent you before the GST authorities for a swift resolution.",
+    "image": "/images/services/indirect-notice.jpg"
+  },
+  {
+    "id": "registration/company",
+    "title": "Company Registration (Private/Public/OPC)",
+    "description": "We provide expert assistance for incorporating various types of companies. Our service covers every step, ensuring a seamless registration process that gives your business a separate legal identity.",
+    "image": "/images/services/registration-company.jpg"
+  },
+  {
+    "id": "registration/gst",
+    "title": "GST Registration",
+    "description": "GST Registration is mandatory for businesses exceeding certain turnover thresholds. We manage the entire registration process, enabling you to legally collect taxes and claim Input Tax Credit.",
+    "image": "/images/services/registration-gst.jpg"
+  },
+  {
+    "id": "registration/partnership",
+    "title": "Partnership Firm Registration",
+    "description": "Registering a partnership firm gives your business legal recognition. We handle the drafting of the Partnership Deed and the complete filing process with the Registrar of Firms.",
+    "image": "/images/services/registration-partnership.jpg"
+  },
+  {
+    "id": "registration/trust",
+    "title": "Trust Registration",
+    "description": "We assist in the formation and registration of trusts for various purposes. Our service includes drafting a legally robust Trust Deed and managing the registration process with the appropriate authorities.",
+    "image": "/images/services/registration-trust.jpg"
+  },
+  {
+    "id": "gst-filling",
+    "title": "GST Filing",
+    "description": "GST filing is a mandatory compliance activity. Our expert team ensures accurate and timely filing of all your GST returns, helping you reconcile your books and avoid heavy penalties.",
+    "image": "/images/services/gst-filing.jpg"
+  },
+  {
+    "id": "income-tax",
+    "title": "Income Tax Filing",
+    "description": "We offer a hassle-free ITR filing service for salaried individuals, professionals, and businesses, ensuring all income sources are reported and all eligible deductions are claimed to minimize your tax liability.",
+    "image": "/images/services/income-tax.jpg"
+  }
+]
